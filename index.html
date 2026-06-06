@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML</title>
+  <link rel="stylesheet" href="styles/body-style.css">
+  <link rel="stylesheet" href="styles/public-style.css">
+  <link rel="stylesheet" href="styles/button-style.css">
+  <link rel="stylesheet" href="styles/more-style.css">
+  <style>
+      body {
+        margin: 0;
+        padding-top: 100px;
+      }
+  </style>
+</head>
+<body>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  
+  <div class="header">Ore UI on html</div>
+  <div class="tab">
+    <div class="btn tab_btn">tab_1</div>
+    <div class="btn tab_btn">tab_2</div>
+    <div class="btn tab_btn">tab_3</div>
+  </div>
+  <div class="tab_content">
+     
+    <div class="tab_page"><!-- 第一页始 -->
+      <div class="topbox">
+        <div class="left">
+          <div class="func_btn" id="full_screen">
+            <img src="Icon_full_screen.png"/>
+          </div>
+          <a class="func_btn" href="setting.html"><img src="Icon_setting.png" /></a>
+        </div>
+        <div class="right">
+          <div class="btn primary_btn middle_btn">按钮</div>
+        </div>
+      </div>
+      <div class="load list box">
+          <div class="board"></div>
+          <div class="board"></div>
+          <div class="board"></div>
+      </div>
+    </div>
+
+    <div class="tab_page" style="overflow: hidden;"><!-- 二页始 -->
+      <div class="gapbox">
+        <div class="section-2 left">
+           <div class="box">
+             <p>已加入Realms(1)</p>
+             <a href="minecraft://"><div class="btn normal_btn">进入游戏</div></a>
+             <div class="btn primary_btn">Primary</div>
+             <br>
+           </div>
+         </div>
+         <div class="right" style="max-height: calc(100vh);">
+           <div class="section">
+             <div class="notice destructive">已过期</div>
+             <img src="world.png">
+             <div class="section-3 no_outline">
+               <div class="gapbox" style="margin-top: 0px;">
+                 <div class="left">
+                   <h2>APX201的领域服</h2>
+                   <p class="desc">领域服描述。</p>
+                   <p>你好</p>
+                   <p>sjsjss</p>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+      </div>
+    </div><!-- 二页末 -->
+     
+    <div class="tab_page">3</div>
+     
+  </div><!-- 组末 -->
+  
+  <script src="main.js"></script>
+</body>
+</html>
