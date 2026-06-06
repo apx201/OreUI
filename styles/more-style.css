@@ -1,0 +1,44 @@
+/* 更多组件 */
+.board {
+  height: 72px;
+  background-color: #48494B;
+}
+
+.board:hover {
+  background-color: #58585A;
+}
+
+.board:active {
+  background-color: #313234;
+}
+
+.list .board {
+  margin-bottom: 6px;
+}
+
+.flex {
+  display: flex;
+}
+
+/* 分割线 */
+.left .cut {
+  border-top: 2px solid #1D1E20;
+  border-bottom: 2px solid #464749;
+}
+.right .cut,
+.set_section {
+  border-top: 2px solid #5B5D5C;
+  border-bottom: 2px solid #323335;
+}
+/* 设置板块 */
+.set_section {
+  font-family: mojangles, notosans;
+  min-height: 20px;
+  align-items: center;
+  color: white;
+  padding: 16px 20px 16px 20px;
+}
+
+.full p {
+  margin-left: 20px;
+}

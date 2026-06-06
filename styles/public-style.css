@@ -1,0 +1,252 @@
+/* 字体 */
+@font-face {
+    font-family: 'minecraft-ten'; 
+    src: url('../fonts/Minecraft-Ten.ttf');
+}
+
+@font-face {
+    font-family: "mojangles";
+    src: url("../fonts/Mojangles.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "notosans";
+    src: url("../fonts/NotoSansSC-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "notosans-bold";
+    src: url("../fonts/NotoSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "unifont";
+    src: url("../fonts/Unifont.ttf") format("truetype");
+}
+
+* {
+    -webkit-tap-highlight-color: transparent; /* 禁用高亮 */
+    touch-action: manipulation; /* 禁用长按菜单 */
+    user-select: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* 界面结构 */
+.gapbox {
+  margin: 6px 20px 20px 20px;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+} /* 带间距内容盒 */
+
+.box {
+  margin: 6px 20px 20px 20px;
+} /* 普通内容盒 */
+
+.topbox {
+  margin: 0px 14px 0px 14px;
+  display: flex;
+}
+.topbox .left,
+.topbox .right {
+  display: flex;
+}
+
+.topbox .right {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.left {
+  width: 30%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.right {
+  width: 70%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.right img,
+.left img,
+.section img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.section,
+.section-2,
+.section-3,
+.section-4 {
+  min-height: 36px;
+}
+
+.no_outline {
+  outline: none !important;
+  margin: 0 !important;
+} /* 完全嵌入 */
+
+/* 部分元素样式 */
+/* 标题栏 */
+.header {
+    font-family: minecraft-ten,notosans;
+    font-size: 20px;
+    background-color: #E7E8EC;
+    border-bottom: 2px solid #ECEDEF;
+    box-shadow: 0 4px 0 #B1B2B6, 0 6px 0 rgba(0,0,0,0.5);
+    height: 40px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.header_btn,
+.header_btn_r {
+    font-family: mojangles;
+    font-size: 20px;
+    background-color: #E7E8EC;
+    height: 40px;
+    width: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 11;
+    color: black;
+}
+
+.header_btn {
+  top: 0;
+  left: 0;
+}
+
+.header_btn_r {
+  top: 0;
+  right: 0;
+  border-left: 2px solid #A1A2A4;
+  box-shadow:inset 2px 0 #fff;
+}
+
+.header_btn:active {
+  background-color: #F5F6FA;
+}
+
+.section {
+  border: #1E1E1E solid 2px;
+} /* 通用板块（添加边框） */
+
+.section-2 {
+  border: solid #000 2px;
+  background-color: rgba(0,0,0,0.4);
+  min-height: 36px;
+} /* 半透明板块 */
+
+.section-3 {
+  margin: 2px;
+  outline: solid #000 2px;
+  border-top: solid #464749 2px;
+  border-bottom: solid #1D1E20 2px;
+  background-color: #313234;
+  box-shadow: 0 2px 0 #1D1E20;
+} /* 带光影深色板块 */
+
+.section-4 {
+  border: solid #1D1E20 2px;
+  background-color: #313234;
+}
+
+.notice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 28px;
+  width: 100%;
+  font-size: 16px;
+  border-bottom: solid #000 2px;
+} /* 板块内通知（黑框）*/
+
+/* 全屏页面 */
+.full.left,
+.full.right {
+  position: fixed;
+  top: 40px;  /* header 高度 */
+  bottom: 0;
+  overflow-y: auto;
+  padding: 0;
+}
+
+.full.left {
+  left: 0;
+  width: 30%;
+  background-color: #313234;
+  border: 2px solid #1E1E1E;
+  margin-top: 6px;
+}
+
+.full.right {
+  right: 0;
+  width: 70%;
+  background-color: #48494B;
+  margin-top: 6px;
+  z-index: -1;
+}
+
+
+/* 标志颜色 */
+.destructive {
+  background-color: #EF8784;
+}
+
+/* 文本 */
+p,
+h1,
+h2 {
+  font-family: mojangles, notosans;
+}
+
+p {
+  color: #fff;
+  font-size: 15px;
+}
+
+.desc {
+  color: #D0D1D5;
+  font-size: 14px;
+}
+
+h1 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+h2 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+/* loading gif 的淡入过渡效果（可选） */
+.section, .section-2 {
+    transition: opacity 1s ease;
+}
+
+/* 确保 loading 图片垂直居中 */
+.loading-gif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10px;
+}

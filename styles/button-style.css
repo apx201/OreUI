@@ -1,0 +1,216 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: mojangles, notosans;
+    height: 36px;
+    width: 100%;
+    justify-self: center;
+    margin: 6px;
+    
+   transition: all 0.2s ease;
+}
+
+.tab .btn {
+  margin: 0;
+  border: none;
+  outline: 2px solid #1E1E1F;
+}
+
+.extra_small_btn {
+    width: 100px;
+}
+
+.small_btn {
+    width: 130px;
+}
+
+.middle_btn {
+    width: 200px;
+}
+
+.large_btn {
+    width: 272px;
+}
+
+/* 次级按钮 */
+.normal_btn {
+    background-color: #D0D1D4;
+    border: 2px solid #1E1E1F;
+    box-shadow: inset 0 -4px #58585A, inset 2px 2px rgba(255, 255, 255, 0.6), inset -2px -6px rgba(255, 255, 255, 0.4);
+    color: #000000;
+    padding-bottom: 6px;
+}
+
+.normal_btn:hover {
+    background-color: #B1B2B5;
+    box-shadow: inset 0 -4px #58585A, inset 2px 2px rgba(255, 255, 255, 0.8), inset -2px -6px rgba(255, 255, 255, 0.6);
+}
+
+.normal_btn:active {
+    background-color: #B1B2B5;
+    box-shadow: inset 2px 2px rgba(255, 255, 255, 0.8), inset -2px -2px rgba(255, 255, 255, 0.6);
+    height: 36px;
+    padding-bottom: 2px;
+    margin-bottom: 10px;
+    transform: translateY(4px);
+}
+
+/* 按钮 */
+.primary_btn ,
+.hero_btn {
+    background-color: #4F8436;
+    border: 2px solid #1E1E1F;
+    box-shadow: inset 0 -4px #2B4E1D, inset 2px 2px rgba(255, 255, 255, 0.2), inset -2px -6px rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding-bottom: 6px;
+}
+
+.primary_btn:hover, 
+.hero_btn:hover{
+    background-color: #3A6327;
+    box-shadow: inset 0 -4px #2A4B1C, inset 2px 2px rgba(255, 255, 255, 0.4), inset -2px -6px rgba(255, 255, 255, 0.3);
+}
+
+.primary_btn:active,
+.hero_btn:active {
+    background-color: #3A6327;
+    box-shadow: inset 2px 2px rgba(255, 255, 255, 0.2), inset -2px -2px rgba(255, 255, 255, 0.1);
+    height: 36px;
+    padding-bottom: 2px;
+    margin-bottom: 10px;
+    transform: translateY(4px);
+}
+
+.hero_btn{
+    font-family: minecraft-ten;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.4);
+}
+
+/* 标签页按钮 */
+.tab_btn {
+    background-color: #48494B;
+    border: 2px solid #1E1E1F;
+    box-shadow: inset 0 -4px #313234, inset 2px 2px rgba(255, 255, 255, 0.2), inset -2px -6px rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding-bottom: 6px;
+}
+
+.tab_btn:hover {
+    background-color: #58585A;
+    box-shadow: inset 0 -4px #313234, inset 2px 2px rgba(255, 255, 255, 0.4), inset -2px -6px rgba(255, 255, 255, 0.3);
+}
+
+.tab_btn:active,
+.tab_btn.active {
+  /*
+    background-color: #313234;
+    box-shadow: inset 2px 2px rgba(255, 255, 255, 0.2), inset -2px -2px rgba(255, 255, 255, 0.1);
+    height: 36px;
+    padding-bottom: 2px;
+    margin-bottom: 10px;
+    transform: translateY(4px);
+    */
+    
+    background-color: #313234;
+    box-shadow: inset 2px 2px rgba(255, 255, 255, 0.2), inset -2px -2px rgba(255, 255, 255, 0.1);
+    height: 36px;
+    padding-bottom: 2px;
+    margin-bottom: 10px;
+    transform: translateY(4px);
+}
+
+.active {
+  position: relative;
+}
+
+.tab_btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 24px;
+    height: 2px;
+    background-color: white;
+}
+
+
+.tab_page {
+  display: none;
+  max-height: calc(100vh);
+  overflow-y: auto;
+}
+
+.tab_page.active {
+  display: block;
+}
+
+/* 其他样式 */
+.tab {
+  display: flex;
+  padding: 0 22px;
+  gap: 2px;
+  position: fixed;
+  top: 56px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.tab .tab_btn.active::after {
+    bottom: 0;
+}
+
+/* 功能按钮和交互板块 */
+.func_btn,
+.board {
+  color: white;
+  border: 2px solid #1E1E1E;
+  font-family: mojangles, notosans;
+  box-shadow: inset 2px 2px rgba(255, 255, 255, 0.1), inset -2px -2px rgba(0,0,0, 0.2);
+}
+
+.func_btn {
+  background-color: #58585A;
+  width: 42px;
+  height: 42px;
+  margin: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.func_btn:active {
+  background-color: #313234;
+}
+
+.func_btn img {
+  width: 50%;
+  image-rendering: crisp-edges;    /* 兼容 Firefox */
+  image-rendering: pixelated;      /* Chrome/Edge */
+  image-rendering: crisp-edges;    /* Safari 备用 */
+}
+
+/*.func_btn:hover {
+  background-color: #48494B;
+}*/
+
+
+/* 全屏左侧列表按钮 */
+.page_btn {
+  font-family: mojangles, notosans;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 16px;
+}
+
+.page_btn:active,
+.page_btn.active {
+  background-color: #48494B;
+  box-shadow: inset 0px -2px #5B5C5E,
+    inset 0px 2px #2B2D2C;
+}

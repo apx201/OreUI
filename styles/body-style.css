@@ -1,0 +1,11 @@
+body {
+  background-color:#1B1B1B;
+ background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../图片.png');
+ background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  overflow: hidden;
+  zoom: 0.8;
+}
